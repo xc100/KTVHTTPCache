@@ -166,4 +166,24 @@
     return 0;
 }
 
++ (NSString *)unitItemPathWithURL:(NSURL *)URL copyFromOriginalFileURL:(NSURL *)fileURL;
+ {
+     NSString * baseFileName = [[KTVHCURLTool tool] keyWithURL:URL];
+     NSString * directoryPath = [self directoryPathWithURL:URL];
+     NSString *temp_path = [directoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4", baseFileName]];
+     NSError * error;
+     [[NSFileManager defaultManager] copyItemAtURL:fileURL toURL:[NSURL fileURLWithPath:temp_path] error:&error];
+     NSLog(@"%@", error);
+     return [self absoultePathWithRelativePath:temp_path];;
+ }
+
++ (NSString *)absoultePathWithRelativePath:(NSString *)path
+{
+    if ([self isRelativePath:path])
+    {
+        path = [[self basePath] stringByAppendingPathComponent:path];;
+    }
+    return path;
+}
+
 @end

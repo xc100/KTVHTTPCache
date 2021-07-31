@@ -156,6 +156,11 @@ FOUNDATION_EXPORT const unsigned char KTVHTTPCacheVersionString[];
 + (void)cacheDeleteAllCaches;
 
 /**
+ *  Insert local file to cache url
+ */
++ (void)insertUnitWithURL:(NSURL *)URL fileURL:(NSURL *)fileURL;
+
+/**
  *  Encode
  *
  *  This part is used to access the encode module.

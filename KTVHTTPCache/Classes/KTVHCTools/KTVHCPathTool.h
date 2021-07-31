@@ -25,4 +25,7 @@
 
 + (long long)sizeAtPath:(NSString *)path;
 
+// 拷贝文件路径
+ + (NSString *)unitItemPathWithURL:(NSURL *)URL copyFromOriginalFileURL:(NSURL *)fileURL;
+
 @end

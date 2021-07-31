@@ -28,4 +28,7 @@
 - (void)deleteUnitsWithLength:(long long)length;
 - (void)deleteAllUnits;
 
+// 插入视频url, 和本地路径
+ - (void)insertUnitWithURL:(NSURL *)URL fileURL:(NSURL *)fileURL;
+
 @end

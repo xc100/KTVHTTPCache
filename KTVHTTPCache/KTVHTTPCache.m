@@ -89,6 +89,11 @@
     [[KTVHCDataStorage storage] deleteAllCaches];
 }
 
++ (void)insertUnitWithURL:(NSURL *)URL fileURL:(NSURL *)fileURL;
+ {
+     [[KTVHCDataStorage storage] insertUnitWithURL:URL fileURL:fileURL];
+ }
+
 #pragma mark - Encode
 
 + (void)encodeSetURLConverter:(NSURL * (^)(NSURL *URL))URLConverter;

@@ -53,4 +53,9 @@
 - (void)deleteCacheWithURL:(NSURL *)URL;
 - (void)deleteAllCaches;
 
+/**
+  *  Insert cache.
+  */
+ - (void)insertUnitWithURL:(NSURL *)URL fileURL:(NSURL *)fileURL;//本地文件写入缓存地址
+
 @end
